@@ -1,0 +1,28 @@
+
+Public Varables
+stings characterNames
+strings classType
+
+int levels
+int conScore
+
+bool isHillDwarf
+bool hasToughFeat
+bool isAvag
+
+
+Dictornay Class (key classType , int hitDie)
+
+for example 
+{
+	Artificer , 8;
+	
+} 
+
+Ablity Score and Modifier 
+( Will be an Array , Dictornay, or Switch)
+
+ShowDialog()
+{
+	Debug.log ( My character (characterName) is a level (levels) (class) with a CON score of (conScore) and
+(isHill Dwarf) and (hasToughFeat). I want the HP (isAvag).
