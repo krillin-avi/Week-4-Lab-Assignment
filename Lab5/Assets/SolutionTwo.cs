@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class SolutionTwo : MonoBehaviour
 {
-    // Start is called before the first frame update
+    CharacterNames characterNames;
     void Start()
     {
-        
+        // Get Character Name and Level
+        // Get Class
+        // get consocre
+        // is Hill dwarf
+        //has tougfeat
+        // is Avg
+
+        Debug.LogFormat("My character (characterName) is a level (levels) (class) with a CON score of (conScore) and\r\n(isHill Dwarf) and (hasToughFeat). I want the HP (isAvag)");
+
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
