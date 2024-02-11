@@ -143,7 +143,7 @@ public class SolutionOne : MonoBehaviour
         HP = (level * classDie) + (level * conBonus) + (level * dwarfBonus) + (level * toughBonus);
 
         // Final Output
-        Debug.Log("My character "+ characterName + " is a level " + level + " with a CON score of " + conScore + " and " + isHillDwarf + " a Hill Dwarf and" + hasToughFeat + "Tough feat. I want the HP" + averageDie);
+        Debug.Log("My character "+ characterName + " is a level " + level + " " + classSelection + " with a CON score of " + conScore + " and " + isHillDwarf + " a Hill Dwarf and " + hasToughFeat + " Tough feat. I want the HP " + averageDie);
 
 
         // Should check isHillDwarf / hasToughFeat and averageDie / rollDie so that we can set and pass a proper value into the final output.
