@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class SolutionTwo : MonoBehaviour
 {
+    void Start()
+    {
+        
+        
+        //NameWillChange nameWillChange = new NameWillChange();
+        //nameWillChange(characterName);
+
+    }
+
+    
+}
+
+public class SolutionTwoOutput 
+{
     public string characterName;
     public int level;
     public string classSelection;
@@ -14,34 +28,18 @@ public class SolutionTwo : MonoBehaviour
     public bool rollDie;
 
 
-    void Start()
-    {
-        
-        
-        //NameWillChange nameWillChange = new NameWillChange();
-        //nameWillChange(characterName);
-
-
-
-
-    }
-
-    
-}
-
-public class SolutionTwoOutput 
-{
- 
-
 
     SolutionTwoOutput(string name, int level, string classChoice)
     { 
-        name = name;
+        this.characterName = name;
+        this.level = level;
+        this.classSelection = classChoice;
+        
+    }
 
-        
-        
-        
-        
+    void ReturnOutput()
+    {
+        return this.characterName;
     }
 
    
