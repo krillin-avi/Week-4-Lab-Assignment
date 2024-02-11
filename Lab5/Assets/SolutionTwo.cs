@@ -13,12 +13,13 @@ public class SolutionTwo : MonoBehaviour
     public bool averageDie;
     public bool rollDie;
 
+
     void Start()
     {
         
         
-        NameWillChange nameWillChange = new NameWillChange();
-        nameWillChange(characterName);
+        //NameWillChange nameWillChange = new NameWillChange();
+        //nameWillChange(characterName);
 
 
 
@@ -28,41 +29,22 @@ public class SolutionTwo : MonoBehaviour
     
 }
 
-public class NameWillChange 
+public class SolutionTwoOutput 
 {
-   
+ 
 
-    // Data Sets
-    Dictionary<string, int> classDictionary = new Dictionary<string, int>
-    {
-        {"Artificer", 8},
-        {"Barbarian", 12},
-        {"Bard", 8},
-        {"Cleric", 8},
-        {"Druid", 8},
-        {"Fighter", 10},
-        {"Monk", 8},
-        {"Ranger", 10},
-        {"Rogue", 8},
-        {"Paladin", 10},
-        {"Sorcerer", 6},
-        {"Wizard", 6},
-        {"Warlock", 8}
-    };
 
-    NameWillChange(string name)
+    SolutionTwoOutput(string name, int level, string classChoice)
     { 
+        name = name;
+
         
-         this.characterName = name;
-       
-        //Debug.Log("My character " + characterName + " is a level " + level + " with a CON score of " + conScore + " and " + isHillDwarf + " a Hill Dwarf and" + hasToughFeat + "Tough feat. I want the HP" + averageDie);
+        
+        
         
     }
 
-    void returnString()
-    {
-        return this.
-    }
+   
 
    
 }
