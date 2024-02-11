@@ -6,11 +6,12 @@ public class CharacterNames
 {
     public string Name;
     public int Level;
+   /*
     public string CharacterNames(Name ,Level  )
     {
        
         
     }
-
+   */
   
 }
