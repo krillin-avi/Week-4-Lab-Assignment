@@ -10,13 +10,17 @@ public class SolutionTwo : MonoBehaviour
     public string classSelection;
     public bool isHillDwarf;
     public bool hasToughFeat;
-
-
-
+    
     // Static Values
     public int conScore;
     public bool averageDie;
     public bool rollDie;
+
+    // Global Values
+    int classHitDieValue;
+    int calculatedConScore;
+    double conBonus;
+    
 
     Dictionary<int, double> dieAverage = new Dictionary<int, double>
     {
@@ -28,20 +32,35 @@ public class SolutionTwo : MonoBehaviour
 
     void Start()
     {
+        // Placeholder Var
+        double HP;
+
         Character character = new Character(characterNameBoo, level, classSelection, isHillDwarf, hasToughFeat);
         ConScore conScoreValue = new ConScore(conScore);
 
+        classHitDieValue = character.GetClassCheckedValue();
+        calculatedConScore = conScoreValue.CalculatedConScore();
 
-        Debug.Log(character.Print());
-        
+        conBonus = classHitDieValue + calculatedConScore;
 
+
+        // Player Details Output
+        Debug.Log("My character " + character.GetName() + " is a level " + character.GetLevel() + " " + character.GetClassSelection() + " with a CON score of " + conScore + " and " + isHillDwarf + " a Hill Dwarf and " + hasToughFeat + " Tough feat. I want the HP " + averageDie);
+
+        // Player HP Output
+        HP = (level * classHitDieValue) + (level * conBonus) + (level * character.GetDwarfBonus()) + (level * character.GetToughBonus());
+        Debug.Log(character.GetName() + " your calculated HP is: " + HP);
     }
 
-   /* public int CaculatedAvgDie(int hitdie)
+    double CaculatedAvgDie(int classHitDieValue)
     {
-        dieAverage[hitdie];
+        return dieAverage[classHitDieValue];
     }
-   */
+
+    int RandomRoll()
+    {
+        return Random.Range(1, classHitDieValue);
+    }
     
 }
 

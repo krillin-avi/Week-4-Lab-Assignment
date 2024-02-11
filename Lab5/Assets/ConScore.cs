@@ -48,13 +48,17 @@ public class ConScore
         if (!(conScore <= 30 && conScore >= 1))
         {
             conScore = 1;
-        } 
+        }
+        else
+        { 
+            conScore = abilityScoreModifiers[conScore];
+        }
 
     }
 
-    int CalculatedConScore()
+    public int CalculatedConScore()
     {
-        return conScore = abilityScoreModifiers[conScore];
+        return conScore;
     }
 
 

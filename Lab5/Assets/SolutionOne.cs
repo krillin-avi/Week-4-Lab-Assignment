@@ -133,6 +133,8 @@ public class SolutionOne : MonoBehaviour
         else
         {
             classDie = random.Next(1, classDictionary[classToUpperCase]);
+
+            
         }
 
         // Get Con Score Multiplier 

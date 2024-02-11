@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 412253214}
   - component: {fileID: 412253213}
   - component: {fileID: 412253212}
-  - component: {fileID: 412253211}
+  - component: {fileID: 412253215}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -142,26 +142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &412253211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412253210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b538cc95bb9789a4dbe35d3a47a2056f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: Krillin
-  level: 8
-  classSelection: Wizard
-  conScore: 6
-  isHillDwarf: 1
-  hasToughFeat: 1
-  averageDie: 0
-  rollDie: 1
 --- !u!81 &412253212
 AudioListener:
   m_ObjectHideFlags: 0
@@ -236,6 +216,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &412253215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412253210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd9cf112693a744d8779f3906e047d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameBoo: Andrew
+  level: 3
+  classSelection: wizard
+  isHillDwarf: 1
+  hasToughFeat: 1
+  conScore: 7
+  averageDie: 0
+  rollDie: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 public class Character
 {
+    // Global Variables
     string characterName;
     int level;
     string classSelection;
     bool isHillDwarf;
     bool hasToughFeat;
+    int toughBonus;
+    int dwarfBonus;
+
+    int classHitDieValue;
 
     Dictionary<string, int> classDictionary = new Dictionary<string, int>
     {
@@ -26,36 +32,64 @@ public class Character
         {"Warlock", 8}
     };
 
-
-    public Character()
-    {
-        characterName = "Christian";
-    }
-
     public Character(string characterName, int level, string classSelection, bool isHillDwarf, bool hasToughFeat)
     {
         this.characterName = characterName;
         this.level = level;
         this.classSelection = classSelection;
-        ClassCheck(classSelection);
         this.isHillDwarf = isHillDwarf;
         this.hasToughFeat = hasToughFeat;
-
     }
 
-   public int ClassCheck(string className)
+    void ClassCheckedValue (string className)
     {
-        string classToUpperCase = char.ToUpper(classSelection[0]) + classSelection.Substring(1);
-
-        return classDictionary[classSelection];
-
-
+        string classToUpperCase = char.ToUpper(className[0]) + className.Substring(1);
+        classHitDieValue = classDictionary[classToUpperCase];
     }
 
-
-   public void Print()
+    int IsHillDwarf(bool isHillDwarf)
     {
-        Debug.LogFormat(ClassCheck(classSelection));
+        if (isHillDwarf)
+        {
+            return dwarfBonus = level++;
+        }
+        else
+        {
+            return dwarfBonus = 1;
+        } 
     }
+
+    int HasToughFeat(bool hasToughFeat)
+    {
+        if (hasToughFeat)
+        {
+            return toughBonus = 2;
+        }
+        else
+        {
+            return toughBonus = 1;
+        }
+
+    }
+
+    // Getter Functions to Respect Encapsulation :)
+    public string GetName()
+    { return this.characterName; }
+
+    public int GetLevel()
+    { return this.level; }
+
+    public string GetClassSelection()
+    { return this.classSelection; }
+
+    public int GetClassCheckedValue()
+    { return classHitDieValue;  }
+
+    public int GetDwarfBonus()
+    { return this.dwarfBonus; }
+
+    public int GetToughBonus()
+    { return this.toughBonus; }
+
 
 }
