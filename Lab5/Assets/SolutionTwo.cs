@@ -18,7 +18,13 @@ public class SolutionTwo : MonoBehaviour
     public bool averageDie;
     public bool rollDie;
 
-
+    Dictionary<int, double> dieAverage = new Dictionary<int, double>
+    {
+        {6, 3.5},
+        {8, 4.5},
+        {10, 5.5},
+        {12, 6.5}
+    };
 
     void Start()
     {
@@ -26,10 +32,16 @@ public class SolutionTwo : MonoBehaviour
         ConScore conScoreValue = new ConScore(conScore);
 
 
-        Debug.Log(character.ReturnTest());
+        Debug.Log(character.Print());
+        
+
     }
 
-
+   /* public int CaculatedAvgDie(int hitdie)
+    {
+        dieAverage[hitdie];
+    }
+   */
     
 }
 

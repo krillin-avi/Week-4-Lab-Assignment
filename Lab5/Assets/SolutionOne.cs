@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using Unity.Mathematics;
+//using Unity.Mathematics;
 using UnityEngine;
 
 public class SolutionOne : MonoBehaviour
