@@ -4,45 +4,33 @@ using UnityEngine;
 
 public class SolutionTwo : MonoBehaviour
 {
-    void Start()
-    {
-        
-        
-        //NameWillChange nameWillChange = new NameWillChange();
-        //nameWillChange(characterName);
-
-    }
-
-    
-}
-
-public class SolutionTwoOutput 
-{
-    public string characterName;
+    // Overloaded Values
+    public string characterNameBoo;
     public int level;
     public string classSelection;
-    public int conScore;
     public bool isHillDwarf;
     public bool hasToughFeat;
+
+
+
+    // Static Values
+    public int conScore;
     public bool averageDie;
     public bool rollDie;
 
 
 
-    SolutionTwoOutput(string name, int level, string classChoice)
-    { 
-        this.characterName = name;
-        this.level = level;
-        this.classSelection = classChoice;
-        
-    }
-
-    void ReturnOutput()
+    void Start()
     {
-        return this.characterName;
+        Character character = new Character(characterNameBoo, level, classSelection, isHillDwarf, hasToughFeat);
+        ConScore conScoreValue = new ConScore(conScore);
+
+
+        Debug.Log(character.ReturnTest());
     }
 
-   
 
-   
+    
 }
+
+
