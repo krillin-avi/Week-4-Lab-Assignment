@@ -9,7 +9,9 @@ public class SolutionTwo : MonoBehaviour
     public int level;
     public string classSelection;
     public bool isHillDwarf;
+    private string hillDwarf = "is" ;
     public bool hasToughFeat;
+    private string toughFeat = "has";
     
     // Static Values
     public int conScore;
@@ -44,8 +46,20 @@ public class SolutionTwo : MonoBehaviour
         conBonus = classHitDieValue + calculatedConScore;
 
 
+        if (!isHillDwarf )
+        {
+            hillDwarf = "is not";
+        }
+
+        if (!hasToughFeat)
+        {
+            toughFeat = "does not have";
+        }
+    
+
+
         // Player Details Output
-        Debug.Log("My character " + character.GetName() + " is a level " + character.GetLevel() + " " + character.GetClassSelection() + " with a CON score of " + conScore + " and " + isHillDwarf + " a Hill Dwarf and " + hasToughFeat + " Tough feat. I want the HP " + averageDie);
+        Debug.Log("My character " + character.GetName() + " is a level " + character.GetLevel() + " " + character.GetClassSelection() + " with a CON score of " + conScore + " and " + hillDwarf + " a Hill Dwarf and " + toughFeat + " Tough feat. I want the HP " + averageDie);
 
         // Player HP Output
         HP = (level * classHitDieValue) + (level * conBonus) + (level * character.GetDwarfBonus()) + (level * character.GetToughBonus());
